@@ -1,11 +1,11 @@
 
 const readline = require("readline-sync");
 
-//Values, Data Types, and Operations
+//Values, Data Types
 let destination;    // string
-let days = 5;       // number
-let budget = 800;   // number
-let dailyCost = 100;
+let days;       // number
+let budget;   // number
+let dailyCost;
 
 //take user input for destination,days & budget
 destination = readline.question("Enter a destination: ");
