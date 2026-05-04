@@ -9,8 +9,26 @@ let dailyCost;
 
 //take user input for destination,days & budget
 destination = readline.question("Enter a destination: ");
+
+//Validate destination data
+ while (!destination || destination.trim() === "") {
+    console.log("Please enter a valid destination name.");
+    destination = readline.question("Please enter a valid destination name: ");
+  }
+
+//take user input & Validate days
 days = readline.question("Enter number of days: ");
+ while (!days || days < 1 ) {
+    days = readline.question("Please enter a valid number of days: ");
+  }
+
+//take user input & Validate budget
 budget = readline.question("Enter a budget: ");
+ while (!budget || budget < 1 ) {
+    budget = readline.question("Please enter a valid budget.: ");
+  }
+
+
 
 // Operation: calculate total trip cost
 let totalCost = days * dailyCost;
